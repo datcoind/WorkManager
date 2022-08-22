@@ -1,15 +1,15 @@
-package com.example.workmanager.viewmodels
+package com.example.workmanager.example_one.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.work.*
 import com.example.workmanager.MainApplication
-import com.example.workmanager.utils.NUM_A
-import com.example.workmanager.utils.NUM_B
-import com.example.workmanager.utils.SUMMATION_WORK_NAME
-import com.example.workmanager.utils.TAG_OUTPUT
-import com.example.workmanager.work.SquareWorker
-import com.example.workmanager.work.SummationWorker
+import com.example.workmanager.example_one.utils.NUM_A
+import com.example.workmanager.example_one.utils.NUM_B
+import com.example.workmanager.example_one.utils.SUMMATION_WORK_NAME
+import com.example.workmanager.example_one.utils.TAG_OUTPUT
+import com.example.workmanager.example_one.work.SquareWorker
+import com.example.workmanager.example_one.work.SummationWorker
 
 class CalcViewModel : ViewModel() {
     internal val outputWorkInfo: LiveData<List<WorkInfo>>

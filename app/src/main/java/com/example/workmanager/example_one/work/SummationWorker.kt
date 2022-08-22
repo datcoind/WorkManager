@@ -1,10 +1,10 @@
-package com.example.workmanager.work
+package com.example.workmanager.example_one.work
 
 import android.content.Context
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import com.example.workmanager.utils.*
+import com.example.workmanager.example_one.utils.*
 
 class SummationWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
