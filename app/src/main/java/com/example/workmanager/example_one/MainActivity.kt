@@ -1,4 +1,4 @@
-package com.example.workmanager
+package com.example.workmanager.example_one
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,11 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.example.workmanager.R
 import com.example.workmanager.databinding.ActivityMainBinding
-import com.example.workmanager.utils.RESULT
-import com.example.workmanager.utils.SUMMATION
-import com.example.workmanager.viewmodels.CalcViewModel
+import com.example.workmanager.example_one.utils.RESULT
+import com.example.workmanager.example_one.utils.SUMMATION
+import com.example.workmanager.example_one.viewmodels.CalcViewModel
 import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
