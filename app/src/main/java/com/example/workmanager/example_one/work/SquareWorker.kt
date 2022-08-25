@@ -12,12 +12,12 @@ import com.example.workmanager.example_one.utils.sleep
 class SquareWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
         makeStatusNotification("Square num A and B", applicationContext)
-        sleep()
+        sleep() // sleep 3000
         val numA = inputData.getInt(NUM_A, 0)
         val numB = inputData.getInt(NUM_B, 0)
         return try {
             val outputData = workDataOf(NUM_A to numA * numA, NUM_B to numB * numB)
-            makeStatusNotification("Complete square}", applicationContext)
+            makeStatusNotification("Complete square: ", applicationContext)
             Result.success(outputData)
         } catch (e: Exception) {
             Result.failure()

@@ -6,11 +6,14 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.work.Data
 import com.example.workmanager.R
 import com.example.workmanager.databinding.ActivityMainBinding
+import com.example.workmanager.example_one.utils.NUM_A
 import com.example.workmanager.example_one.utils.RESULT
 import com.example.workmanager.example_one.utils.SUMMATION
 import com.example.workmanager.example_one.viewmodels.CalcViewModel
+import com.example.workmanager.example_three.EventHandler
 import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
@@ -40,6 +43,12 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, ResultActivity::class.java)
                 intent.putExtra(RESULT, viewModel.result)
                 startActivity(intent)
+            }
+
+            btnExampleThree.setOnClickListener {
+                val numA = abs(edtNumA.text.toString().toInt())
+                val dataBuilder = Data.Builder().putInt(NUM_A, numA).build()
+                EventHandler.periodRequest(this@MainActivity, dataBuilder)
             }
         }
 
